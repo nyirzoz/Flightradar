@@ -11,6 +11,9 @@
 #### Ezután telepítünk néhány függőséget az RTL SDR felépítéséhez
     sudo apt install build-essential cmake libusb-1.0-0-dev pkg-config
 
+#### Git telepítése
+    sudo apt install git
+
 #### Most klónozzuk az RTL SDR-t egy új, sdr nevű könyvtárba a saját könyvtárunk alatt
     mkdir ~/sdr
     cd ~/sdr
