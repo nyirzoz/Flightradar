@@ -53,3 +53,24 @@
      ./dump1090  --interactive --aggressive --net  
 
 #### És ha megnyitsz egy webböngészőt a http:// Orange Pi Zero IP-címére : 8080, akkor ugyanazon adatok térképes ábrázolását kell látnod
+
+#### Rendszerindításkor elindítsa a dump1090-et
+     sudo apt-get install screen
+
+#### Most váltsunk a dump1090 telepítési könyvtárára
+     cd ~/sdr/dump1090/
+
+#### Hozz létre egy run.sh nevű szövegfájlt
+     #!/bin/bash
+     cd "${HOME}/sdr/dump1090/"
+     ./dump1090 --net --interactive --aggressive     
+
+#### Most állítsd be a jogosultságokat, hogy a fájl végrehajtható legyen
+     chmod u+x ~/sdr/dump1090/run.sh
+
+#### Ezután szerkeszd a crontab fájlodat
+     crontab -e
+
+#### hogy a következő sort is belefoglaljuk
+     @reboot screen -d -m -S "dump1090 at boot" ${HOME}/sdr/dump1090/run.sh
+     
