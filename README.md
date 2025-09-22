@@ -10,6 +10,7 @@
 
 #### Ezután telepítünk néhány függőséget az RTL SDR felépítéséhez
     sudo apt-get install -y cmake libusb-1.0-0-dev build-essential
+    sudo apt install build-essential cmake libusb-1.0-0-dev pkg-config
 
 #### Git telepítése
     sudo apt install git
