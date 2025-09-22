@@ -9,7 +9,7 @@
     sudo mv ~/no-rtl.conf /etc/modprobe.d/
 
 #### Ezután telepítünk néhány függőséget az RTL SDR felépítéséhez
-    sudo apt install build-essential cmake libusb-1.0-0-dev pkg-config
+    sudo apt-get install -y cmake libusb-1.0-0-dev build-essential
 
 #### Git telepítése
     sudo apt install git
